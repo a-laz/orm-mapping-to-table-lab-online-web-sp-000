@@ -5,8 +5,10 @@ class Student
   attr_accessor :name, :grade
   attr_reader :id
 
-  def initialize(attributes, id=nil)
-    attributes.each{|k,v| self.send(("#{k}="), v)}
+  def initialize(name, grade, id=nil)
+    @id = id
+    @name = name
+    @grade = grade
   end
 
   def self.create_table
